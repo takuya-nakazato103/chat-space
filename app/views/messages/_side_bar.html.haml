@@ -1,18 +1,18 @@
-.side-bar
-  .side-bar__top--box
-    .side-bar__user--info
-      %p.side-bar__user--name masa
+.side
+  .side__top
+    .side__top--info
+      %p.user__name masa
       = link_to '#', class: "icons" do
         = icon('far', 'edit', class: "pen-icon")
         = icon('fas', 'cog', class: "cog-icon")
-  .side-bar__group--box
-    %ul.side-bar__group--list
-      %li.group__info
-        %p.group__name techcamp
-        %p.group__message まだメッセージがありません
-      %li.group__info
-        %p.group__name techcamp
-        %p.group__message まだメッセージがありません
-      %li.group__info
-        %p.group__name techcamp
-        %p.group__message まだメッセージがありません
+  .side__group
+    %ul.group__list
+      %li.group__list--info
+        %p.group__list--name techcamp
+        %p.group__list--message まだメッセージがありません
+      %li.group__list--info
+        %p.group__list--name techcamp
+        %p.group__list--message まだメッセージがありません
+      %li.group__list--info
+        %p.group__list--name techcamp
+        %p.group__list--message まだメッセージがありません
