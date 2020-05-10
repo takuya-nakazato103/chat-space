@@ -42,6 +42,32 @@
           }
       }
   }
+
+  &__group--box {
+    .side-bar__group--list {
+      list-style: none;
+
+        .group__info {
+          height: 91px;
+          width: 100%;
+          color: #ffffff;
+          font-weight: bold;
+          padding: 0 20px;
+
+            .group__name {
+              font-size: 15px;
+              padding-top: 20px;
+            }
+
+            .group__message {
+              font-size: 11px;
+              padding-top: 5px;
+              padding-bottom: 40px;
+            }
+
+        }
+    }
+  }
 }
 
 .main-chat {
