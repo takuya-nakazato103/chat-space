@@ -22,3 +22,9 @@
           %p.message__date 2019/11/20(Wed) 17:43:01
         %p.message__text おはよう！
   .main-chat__form--box
+    .form__container
+      %input.text__form{name: "message", placeholder: "type a message", type: "text"}
+      %label{class: "image__file"}
+        = icon('fa', 'image')
+        %input.image__select{name: "message-image", type: "file"}
+    %input.send__btn{type: "submit", value: "Send"}
