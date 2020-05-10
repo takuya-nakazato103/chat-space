@@ -14,6 +14,33 @@
   &__top--box {
     height: 100px;
     background-color: #253141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+      .side-bar__user--info {
+        height: 20px;
+        width: 100%;
+        margin: 0 20px;
+        color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+
+          .side-bar__user--name {
+            font-weight: bold;
+            font-size: 16px;
+          }
+
+          .icons {
+            height: 60px;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+              .pen-icon {
+                margin-right: 5px;
+              }
+          }
+      }
   }
 }
 
