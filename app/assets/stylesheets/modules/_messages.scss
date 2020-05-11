@@ -12,7 +12,6 @@ $white-color: #ffffff;
   height: 100vh;
   width: 300px;
 
-
     &__top {
       height: 100px;
       background-color: #253141;
@@ -30,25 +29,27 @@ $white-color: #ffffff;
           }
     }
 
-        .user__name {
-          font-weight: bold;
-          font-size: 16px;
-        }
-
-        .icons {
-          height: 60px;
-          color: $white-color;
-          text-decoration: none;
-          display: flex;
-            .pen-icon {
-              margin-right: 5px;
-            }
+    
+    .user__name {
+      font-weight: bold;
+      font-size: 16px;
     }
-  
-
-  &__group {
-    background-color: #2f3e51;
-    height: 100%;
+    
+    .icons {
+      height: 60px;
+      color: $white-color;
+      text-decoration: none;
+      display: flex;
+      
+      .pen-icon {
+        margin-right: 5px;
+      }
+    }
+    
+    &__group {
+      background-color: #2f3e51;
+      height: 100%;
+    }
 
     .group__list {
       list-style: none;
@@ -57,47 +58,46 @@ $white-color: #ffffff;
         height: 91px;
         width: 100%;
         color: $white-color;
-        font-weight: bold;
         padding: 0 20px;
       }
-        
-        &--name {
-          font-size: 15px;
-          padding-top: 20px;
-        }
-        
-        &--message {
-          font-size: 11px;
-              padding-top: 5px;
-              padding-bottom: 40px;
-        }
-            
-    }
-  }
-}
       
-      .main-chat {
-        height: 100vh;
-        width: calc(100vw - 300px);
-        background-color: $white-color;
+      &--name {
+        font-size: 15px;
+        padding-top: 20px;
+      }
+      
+      &--message {
+        font-size: 11px;
+        padding-top: 5px;
+        padding-bottom: 40px;
+      }
+      
+    }
+    
+}
+    
+      
+.main {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  background-color: $white-color;
         
-        &__top--box {
-          height: 100px;
-          border-bottom: solid 1px #eeeeee;
-          display: flex;
-          justify-content: space-between;
+  &__top {
+    height: 100px;
+    border-bottom: solid 1px #eeeeee;
+    display: flex;
+    justify-content: space-between;
           
-          .group__info {
+          .group-top {
             padding-left: 40px;
-            font-weight: bold;
             
-            .group__name {
+            &__name {
               font-size: 20px;
               color: #333333;
               margin: 35px 0 15px 0;
             }
             
-            .member__name {
+            &__member {
               font-size: 12px;
               color: #999999;
             }
@@ -108,35 +108,35 @@ $white-color: #ffffff;
             color: #38aef0;
             text-decoration: none;
             width: 72px;
-        height: 40px;
-        border: solid 1px #38aef0;
-        text-align: center;
-        line-height: 40px;
-        margin: 28px 40px 28px 0;
-      }
+            height: 40px;
+            border: solid 1px #38aef0;
+            text-align: center;
+            line-height: 40px;
+            margin: 28px 40px 28px 0;
+          }
   }
 
-  &__messages--box {
+  &__messages {
     background-color: #fafafa;
     height: calc(100% - 190px);
 
-      .main-chat__message--list {
+      .message__list {
         list-style: none;
 
-          .message__container {
+          &--container {
             padding: 35px 0 46px 40px;
 
               .message__info {
-                font-weight: bold;
                 display: flex;
                 padding-bottom: 12px;
 
-                .user__name {
+                &--user {
                   color: #333333;
                   font-size: 16px;
+                  font-weight: bold;
                 }
 
-                .message__date {
+                &--date {
                   color: #999999;
                   font-size: 12px;
                   padding-left: 10px;
@@ -151,7 +151,7 @@ $white-color: #ffffff;
       }
   }
 
-  &__form--box {
+  &__form {
     background-color: #d2d2d2;
     height: 90px;
     width: calc(100vw - 300px);
@@ -159,7 +159,7 @@ $white-color: #ffffff;
     display: flex;
     align-items: center;
 
-      .form__container {
+      &--container {
         width: 100%;
         display: flex;
         align-items: center;
@@ -172,6 +172,7 @@ $white-color: #ffffff;
         }
 
         .image__file {
+          font-size: 23px;
           position: absolute;
           right: 10px;
           .image__select {

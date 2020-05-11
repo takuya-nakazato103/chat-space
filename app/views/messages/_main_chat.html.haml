@@ -1,30 +1,34 @@
-.main-chat
-  .main-chat__top--box
-    .group__info
-      %p.group__name test
-      %p.member__name Member : masa
+.main
+
+  .main__top
+    .group-top
+      %p.group-top__name test
+      %p.group-top__member Member : masa
     = link_to "Edit", "#",class: "edit--btn"
-  .main-chat__messages--box
-    %ul.main-chat__message--list
-      %li.message__container
+
+  .main__messages
+    %ul.message__list
+      %li.message__list--container
         .message__info
-          %p.user__name masa
-          %p.message__date 2019/11/20(Wed) 17:43:01
+          %p.message__info--user masa
+          %p.message__info--date 2019/11/20(Wed) 17:43:01
         %p.message__text おはよう！
-      %li.message__container
+      %li.message__list--container
         .message__info
-          %p.user__name masa
-          %p.message__date 2019/11/20(Wed) 17:43:01
+          %p.message__info--user masa
+          %p.message__info--date 2019/11/20(Wed) 17:43:01
         %p.message__text おはよう！
-      %li.message__container
+      %li.message__list--container
         .message__info
-          %p.user__name masa
-          %p.message__date 2019/11/20(Wed) 17:43:01
+          %p.message__info--user masa
+          %p.message__info--date 2019/11/20(Wed) 17:43:01
         %p.message__text おはよう！
-  .main-chat__form--box
-    .form__container
+      
+
+  .main__form
+    .main__form--container
       %input.text__form{name: "message", placeholder: "type a message", type: "text"}
       %label{class: "image__file"}
-        = icon('fa', 'image')
+        = icon('far', 'image')
         %input.image__select{name: "message-image", type: "file"}
     %input.send__btn{type: "submit", value: "Send"}
