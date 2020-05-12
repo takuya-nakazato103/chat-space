@@ -46,7 +46,7 @@
     
     &__group {
       background-color: #2f3e51;
-      height: 100%;
+      height: calc(100% - 100px);
     }
 
     .group__list {
