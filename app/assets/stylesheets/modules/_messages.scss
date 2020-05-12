@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 
-$white-color: #ffffff;
-
 .wrapper {
   display: flex;
 }
@@ -23,7 +21,7 @@ $white-color: #ffffff;
             height: 20px;
             width: 100%;
             margin: 0 20px;
-            color: $white-color;
+            color: $white;
             display: flex;
             justify-content: space-between;
           }
@@ -37,7 +35,7 @@ $white-color: #ffffff;
     
     .icons {
       height: 60px;
-      color: $white-color;
+      color: $white;
       text-decoration: none;
       display: flex;
       
@@ -57,7 +55,7 @@ $white-color: #ffffff;
       &--info {
         height: 91px;
         width: 100%;
-        color: $white-color;
+        color: $white;
         padding: 0 20px;
       }
       
@@ -80,7 +78,7 @@ $white-color: #ffffff;
 .main {
   height: 100vh;
   width: calc(100vw - 300px);
-  background-color: $white-color;
+  background-color: $white;
         
   &__top {
     height: 100px;
@@ -183,7 +181,7 @@ $white-color: #ffffff;
 
       .send__btn {
         background-color: #38aef0;
-        color: $white-color;
+        color: $white;
         height: 50px;
         width: 100px;
         margin-left: 15px;
