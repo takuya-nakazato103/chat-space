@@ -1,10 +1,13 @@
 .side
   .side__top
     .side__top--info
-      %p.user__name masa
-      = link_to '#', class: "icons" do
-        = icon('far', 'edit', class: "pen-icon")
-        = icon('fas', 'cog', class: "cog-icon")
+      %p.user__name
+        = current_user.name
+      .icons
+        = link_to do
+          = icon('far', 'edit', class: "pen-icon")
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'cog', class: "cog-icon")
   .side__group
     %ul.group__list
       %li.group__list--info
