@@ -35,12 +35,16 @@
     
     .icons {
       height: 60px;
-      color: $white;
       text-decoration: none;
       display: flex;
       
       .pen-icon {
         margin-right: 5px;
+        color: $white;
+      }
+
+      .cog-icon {
+        color: $white;
       }
     }
     
