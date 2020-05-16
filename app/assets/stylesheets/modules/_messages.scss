@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.link-style {
+  text-decoration: none;
+}
+
 .wrapper {
   display: flex;
 }
@@ -35,7 +39,6 @@
     
     .icons {
       height: 60px;
-      text-decoration: none;
       display: flex;
       
       .pen-icon {

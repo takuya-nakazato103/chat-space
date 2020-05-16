@@ -4,18 +4,16 @@
       %p.user__name
         = current_user.name
       .icons
-        = link_to do
+        = link_to new_group_path, class: "link-style" do
           = icon('far', 'edit', class: "pen-icon")
-        = link_to edit_user_path(current_user) do
+        = link_to edit_user_path(current_user), class: "link-style" do
           = icon('fas', 'cog', class: "cog-icon")
   .side__group
-    %ul.group__list
-      %li.group__list--info
-        %p.group__list--name techcamp
-        %p.group__list--message まだメッセージがありません
-      %li.group__list--info
-        %p.group__list--name techcamp
-        %p.group__list--message まだメッセージがありません
-      %li.group__list--info
-        %p.group__list--name techcamp
-        %p.group__list--message まだメッセージがありません
+    - current_user.groups.each do |group|
+      %ul.group__list
+        = link_to '#', class: "link-style" do
+          %li.group__list--info
+            %p.group__list--name
+              = group.name
+            %p.group__list--message
+              まだメッセージがありません
