@@ -169,6 +169,7 @@
         display: flex;
         align-items: center;
         position: relative;
+        
 
         .text__form {
           height: 50px;
@@ -177,12 +178,13 @@
         }
 
         .image__file {
-          font-size: 23px;
           position: absolute;
-          right: 10px;
-          .image__select {
-            display: none;
-          }
+          right: 140px;
+          font-size: 23px;
+        }
+
+        .image__select {
+          display: none;
         }
       }
 
