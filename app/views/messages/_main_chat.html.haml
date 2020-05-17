@@ -5,7 +5,10 @@
       %p.group-top__name
         = @group.name
       %p.group-top__member 
-        = @group.users.pluck(:name)
+        %span
+          Member :
+          - @group.users.each do |user|
+            = user.name
     = link_to "Edit", "#",class: "edit--btn"
 
   .main__messages
