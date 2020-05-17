@@ -11,9 +11,9 @@
   .side__group
     - current_user.groups.each do |group|
       %ul.group__list
-        = link_to '#', class: "link-style" do
+        = link_to group_messages_path(group), class: "link-style" do
           %li.group__list--info
             %p.group__list--name
               = group.name
             %p.group__list--message
-              まだメッセージがありません
+              = group.show_last_message
