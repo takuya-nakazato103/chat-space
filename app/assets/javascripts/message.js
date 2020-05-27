@@ -59,6 +59,6 @@ $(function() {
     })
     .always(function() {
       $('.send__btn').removeAttr('disabled');
-    })
+    });
   });
 });
