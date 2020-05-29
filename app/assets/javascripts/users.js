@@ -52,7 +52,6 @@ $(function() {
     var userName = $(this).attr('data-user-name');
     var userId = $(this).attr('data-user-id');
     $(this).parent().remove();
-    console.log(userName);
     groupUser(userName, userId);
   });
 
