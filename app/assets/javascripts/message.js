@@ -2,7 +2,7 @@ $(function() {
   function buildHTML(message) {
     if (message.image) {
       var html =
-        `<div class="message__container">
+        `<div class="message__container" data-message-id=${message.id}>
           <div class="message__info">
             <p class="message__info--user">
               ${message.user_name}
@@ -19,7 +19,7 @@ $(function() {
         return html;
     } else {
       var html = 
-        `<div class="message__container">
+        `<div class="message__container" data-message-id${message.id}>
           <div class="message__info">
             <p class="message__info--user">
               ${message.user_name}
@@ -60,5 +60,21 @@ $(function() {
     .always(function() {
       $('.send__btn').removeAttr('disabled');
     });
+
+    var reloadMessages = function() {
+      var last_message_id = $('.message__container:last').data('message-id');
+      $.ajax({
+        url: "api/messages",
+        type: 'GET',
+        dataType: 'json',
+        data: {id: last_message_id}
+      })
+      .done(function() {
+        console.log('success');
+      })
+      .fail(function() {
+        console.log('error');
+      })
+    }
   });
 });
