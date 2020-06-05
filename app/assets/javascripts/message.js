@@ -19,7 +19,7 @@ $(function() {
         return html;
     } else {
       var html = 
-        `<div class="message__container" data-message-id${message.id}>
+        `<div class="message__container" data-message-id=${message.id}>
           <div class="message__info">
             <p class="message__info--user">
               ${message.user_name}
@@ -71,6 +71,7 @@ $(function() {
       data: {id: last_message_id}
     })
     .done(function(messages) {
+      console.log(messages);
       if (messages.length !== 0) {
         var insertHTML = "";
         $.each(messages, function(i, message) {
@@ -84,8 +85,7 @@ $(function() {
       alert('error');
     });
   };
-  if (document.location.href.match(/\/groups\/\d+\/messges/)) {
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 7000);
-  }
-  
+  };
 });
